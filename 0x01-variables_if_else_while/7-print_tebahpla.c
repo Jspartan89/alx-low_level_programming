@@ -2,7 +2,7 @@
 /**
  * main -  prints the lowercase alphabet in reverse
  *
- * Return - 0 (Success)
+ * Return - 0 on Success
  */
 int main(void)
 {
@@ -14,5 +14,6 @@ int main(void)
 		c--;
 	}
 	putchar('\n');
+
 	return (0);
 }
