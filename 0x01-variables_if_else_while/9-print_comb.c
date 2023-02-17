@@ -6,20 +6,22 @@
  */
 int main(void)
 {
-	int num;
+	int i = '0';
 
-	for (num = 0; num <= 9; num++)
+	while (i <= '9')
 	{
-		putchar((num % 10) + '0');
-		if (num == 9)
+		putchar(i);
+
+		if (i != '9')
 			continue;
+
+
 		{
-		putchar(',');
-		putchar(' ');
+			putchar(',');
+			putchar(' ');
 		}
+		++i:
 	}
-	{
-		putchar('\n');
-	}
-	return (0)
+	putchar('\n');
+	return (0);
 }
