@@ -1,34 +1,32 @@
 #include <stdlib.h>
 #include <time.h>
-#include <iostream>
-
+#include <stdio.h>
 /**
- * main - Prints the last digits of a randomly generator number and whether it is greater than 5, less than 6, or 0.
- *
- * Return: Always 0
+ * main - Determine if the last digit of a random number is
+ * greater than or less than 5, or is zero..
+(*
+ * Return: 0 on success
  */
 int main(void)
 {
-        int n;
+	int n;
+	char last[] = "Last digit of";
 
-        srand(time(0));
-        n = rand() - RAND_MAX / 2;
-        int last_digit = abs (n % 10);
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	printf("%s %d is %d and is ", last, n, n % 10);
+	if (n % 10 > 5)
+	{
+		printf("greater than 5\n");
+	}
+	else if (n % 10 == 0)
+	{
+		printf("0\n");
+	}
+	else
+	{
+		printf("less than 6 and not 0\n");
+	}
+	return (0);
 
-std: :cout << "last digit of " << n << " is ";
-
-     if (last_digit > 5)
-     {
-std: :cout << last_digit << " is greater than 5";
-     }
-     else if (last_digit = 0)
-     {
-std: :cout << last_digit << " and is 0";
-     }
-     else if (last_digit < 6)
-     {
-             std::cout << last_digit << " and is less than 6 and not 0";
-     }
-
-     return (0);
 }
