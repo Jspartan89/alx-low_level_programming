@@ -1,4 +1,4 @@
-#include <main.h>
+#include <stdio>
 /**
  * main - a function that prints the n times table, starting with 0
  * print_times_table - Prints the times table of the input,
