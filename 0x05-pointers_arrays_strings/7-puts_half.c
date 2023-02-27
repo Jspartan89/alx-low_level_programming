@@ -7,14 +7,15 @@
   * Return: void
   */
 void puts_half(char *str)
+	int main(void)
 {
-	char ch;
+	char *str;
+	{
+		puts_half(str);
+	}
 
-ch = arrayname[28];
-arrayname[28] = '\0';
-_putchar("%s", arrayname);
-arrayname[28] = ch;
-{
 	_putchar('\n');
+
 }
-}
+
+
