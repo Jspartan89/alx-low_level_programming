@@ -1,26 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>  
-//this is a program to generate a random password
-
-int main()
+#include <time.h>
+/**
+ * main - generates keygen.
+ * Return: 0 Always.
+ */
+int main(void)
 {
-    int counter = 0;
-    srand(time(NULL));
-    char randChar;
+	int pass[100];
+	int i, sum, n;
 
-    int  passwordLength;
+	sum = 0;
 
-    printf("Type in a password Length \n");
-    scanf("%d", &passwordLength);
+	srand(time(NULL));
 
-    while(counter < passwordLength)
-    {
-        //seed random based on time
-        srand(time(NULL));
-        randChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"[random () % 62];    
-        printf("%c", randChar);
-        counter++;
-    }
-    return 0;
+	for (i = 0; i < 100; i++)
+	{
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
+		if ((2772 - sum) - '0' < 78)
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
+			break;
+		}
+	}
+
+	return (0);
 }
